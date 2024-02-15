@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nouveau Annonce</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input type="text" label="Photo" [(ngModel)]="annonce.pictureLink"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" label="Titre" [(ngModel)]="annonce.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" label="Ville" [(ngModel)]="annonce.city"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" label="Prix" [(ngModel)]="annonce.price"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" label="Vendeur" [(ngModel)]="annonce.seller"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" label="Description" [(ngModel)]="annonce.description"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-text>Vendu ?</ion-text>
+    <ion-toggle label="Vendu" [(ngModel)]="annonce.sold"></ion-toggle>
+  </ion-item>
+  <p class="text-center">
+    <ion-button (click)="add()">Envoyer</ion-button>
+  </p>
+</ion-content>

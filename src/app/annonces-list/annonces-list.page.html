@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>LeMauvaisEndroit</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <h2>Création d'un nouveau annonce</h2>
+  <ion-button routerLink="/annonces/new">Création</ion-button>
+  <h2>Liste des annonces</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4" *ngFor="let annonce of annonces">
+        <ion-card [routerLink]="['/annonces', annonce.id]">
+          <img [src]="annonce.pictureLink" [alt]="annonce.title">
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
